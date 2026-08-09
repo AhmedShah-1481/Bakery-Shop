@@ -1,6 +1,7 @@
 import { site, navLinks } from '../../data/site'
 import { buildGeneralLink } from '../../lib/whatsapp'
 import { WhatsAppIcon } from '../ui/Button'
+import { CUP_PATH, FROSTING_PATH, CHERRY } from '../ui/CupcakeMark'
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -20,15 +21,9 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <svg viewBox="0 0 64 64" className="w-11 h-11" aria-hidden="true">
                 <rect width="64" height="64" rx="14" className="fill-cream/10" />
-                <path
-                  d="M20 34h24l-3.5 18a3 3 0 0 1-3 2.6H26.5a3 3 0 0 1-3-2.6L20 34Z"
-                  className="fill-caramel"
-                />
-                <path
-                  d="M20 34c0-6 4.2-9.5 9-10.2 1-4.3 4.6-6.8 8.4-5.9 3.4.8 5.7 4 5.4 7.4 3.2 1.2 5.2 4.4 4.8 8.7H20Z"
-                  className="fill-blush"
-                />
-                <circle cx="32" cy="15" r="3.4" className="fill-berry" />
+                <path d={CUP_PATH} className="fill-caramel" />
+                <path d={FROSTING_PATH} className="fill-blush" />
+                <circle cx={CHERRY.cx} cy={CHERRY.cy} r={CHERRY.r} className="fill-berry" />
               </svg>
               <span className="font-display text-2xl font-semibold text-cream">
                 Sweet Bites

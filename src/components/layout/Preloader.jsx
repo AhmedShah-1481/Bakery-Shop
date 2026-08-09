@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
+import { CupcakeMark } from '../ui/CupcakeMark'
 
 /**
  * Intro sequence: the cupcake mark draws itself, a counter runs to 100,
@@ -80,35 +81,7 @@ export function Preloader({ onDone }) {
             exit={{ opacity: 0, scale: 0.94 }}
             transition={{ duration: 0.35 }}
           >
-            <svg viewBox="0 0 64 64" className="w-20 h-20 md:w-24 md:h-24">
-              <motion.path
-                d="M20 34h24l-3.5 18a3 3 0 0 1-3 2.6H26.5a3 3 0 0 1-3-2.6L20 34Z"
-                fill="none"
-                stroke="#C98B3A"
-                strokeWidth="1.8"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 1.1, ease: 'easeInOut' }}
-              />
-              <motion.path
-                d="M20 34c0-6 4.2-9.5 9-10.2 1-4.3 4.6-6.8 8.4-5.9 3.4.8 5.7 4 5.4 7.4 3.2 1.2 5.2 4.4 4.8 8.7H20Z"
-                fill="none"
-                stroke="#F6E0DA"
-                strokeWidth="1.8"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 1.2, ease: 'easeInOut', delay: 0.25 }}
-              />
-              <motion.circle
-                cx="32"
-                cy="15"
-                r="3.4"
-                fill="#D64550"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 1.25, type: 'spring', stiffness: 300, damping: 12 }}
-              />
-            </svg>
+            <CupcakeMark animated className="w-20 h-20 md:w-24 md:h-24" />
 
             <div className="flex flex-col items-center gap-3">
               <p className="font-display text-2xl md:text-3xl text-cream tracking-tight">
