@@ -4,6 +4,8 @@ An interactive one-page website for **Sweet Bites**, a bakery in Arifwala, Punja
 Orders are placed through WhatsApp — there is no backend, no database and no
 hosting cost beyond static file hosting.
 
+LIVE LINK: https://sweetbites-nu.vercel.app
+
 > **This is a sample/pitch build.** All business details (phone number, prices,
 > photos) are realistic **placeholders**. See [Before going live](#before-going-live).
 
